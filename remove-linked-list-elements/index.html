@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- http headers -->
+		<meta
+			http-equiv="Content-Security-Policy"
+			content="default-src 'self'; base-uri 'self'; font-src 'self' https://fonts.bunny.net; img-src 'self'; script-src 'self' https://oneminch-umami.vercel.app; style-src 'self' https://fonts.bunny.net https://cdn.statically.io 'unsafe-inline';" />
+		<meta http-equiv="X-XSS-Protection" content="1;mode=block" always />
+		<meta http-equiv="X-Content-Type-Options" content="'nosniff' always" />
+		<meta name="referrer" content="no-referrer" />
+		<meta http-equiv="X-Frame-Options" content="sameorigin" />
+		<!-- Primary Meta Tags -->
+		<meta name="title" content="Remove Linked List Elements" />
+		<meta name="description" content="" />
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="Remove Linked List Elements" />
+		<meta property="og:title" content="Remove Linked List Elements" />
+		<meta property="og:url" content="" />
+		<meta property="og:description" content="" />
+		<meta property="twitter:description" content="" />
+		<meta property="og:image" content="/coding-problem-solutions/assets/social.png" />
+		<meta property="twitter:image" content="/coding-problem-solutions/assets/social.png" />
+		<!-- Favicon -->
+		<link
+			rel="shortcut icon"
+			href="/coding-problem-solutions/assets/favicon.png"
+			type="image/x-icon" />
+		<link rel="stylesheet" href="/coding-problem-solutions/style.css" />
+		<link rel="preconnect" href="https://fonts.bunny.net" />
+		<link
+			href="https://fonts.bunny.net/css?family=ibm-plex-mono:400|inter:500&display=swap"
+			rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.statically.io/gh/PrismJS/prism-themes/447479fc/themes/prism-one-dark.min.css" />
+		<!-- Privacy friendly analytics -->
+		<script async defer data-website-id="d1c29b81-2b65-4740-89f9-e6bf2967fd19" src="https://oneminch-umami.vercel.app/minch-measure.js"></script>
+		<title>Remove Linked List Elements</title>
+	</head>
+	<body></body>
+</html>
+
+
+<main>
+	
+<div class="solution">
+	
+	<section class="header">
+		<h2><a href="/coding-problem-solutions/">Outline</a></h2>
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			fill="none"
+			viewBox="0 0 24 24"
+			stroke="currentColor">
+			<path
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+		</svg>
+		<h1>Remove Linked List Elements</h1>
+	</section>
+
+	
+	<section class="tags">
+		
+		<code>leetcode</code>
+		
+		<code>solutions</code>
+		
+		<code>python</code>
+		
+		<code>linked lists</code>
+		
+	</section>
+
+	<article>
+		
+		<span class="content">
+			<strong>The Problem</strong>: <a href="https://leetcode.com/problems/remove-linked-list-elements/" target="_blank" rel="noopener noreferrer">Remove Linked List Elements</a>
+      
+      <img src="/coding-problem-solutions/assets/leetcode.png" alt="Leetcode" title="Leetcode" />
+		</span>
+
+		
+		<p><strong>My Solution</strong>:</p>
+<pre class="language-py"><code class="language-py"><span class="token comment"># Definition for singly-linked list.</span><br><span class="token comment"># class ListNode:</span><br><span class="token comment">#     def __init__(self, val=0, next=None):</span><br><span class="token comment">#         self.val = val</span><br><span class="token comment">#         self.next = next</span><br><br><span class="token keyword">def</span> <span class="token function">removeElements</span><span class="token punctuation">(</span>head<span class="token punctuation">:</span> Optional<span class="token punctuation">[</span>ListNode<span class="token punctuation">]</span><span class="token punctuation">,</span> val<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> Optional<span class="token punctuation">[</span>ListNode<span class="token punctuation">]</span><span class="token punctuation">:</span><br>    new_node <span class="token operator">=</span> ListNode<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> head<span class="token punctuation">)</span><br>    <br>    curr <span class="token operator">=</span> new_node<br>    <br>    <span class="token keyword">while</span> curr<span class="token punctuation">:</span><br>        <span class="token keyword">if</span> curr<span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token keyword">and</span> curr<span class="token punctuation">.</span><span class="token builtin">next</span><span class="token punctuation">.</span>val <span class="token operator">==</span> val<span class="token punctuation">:</span><br>            curr<span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token operator">=</span> curr<span class="token punctuation">.</span><span class="token builtin">next</span><span class="token punctuation">.</span><span class="token builtin">next</span><br>        <span class="token keyword">else</span><span class="token punctuation">:</span><br>            curr <span class="token operator">=</span> curr<span class="token punctuation">.</span><span class="token builtin">next</span><br><br>    <span class="token keyword">return</span> new_node<span class="token punctuation">.</span><span class="token builtin">next</span></code></pre>
+
+	</article>
+
+	<section class="footer-navigation">
+		 
+		<p>
+			<strong>Previous Solution</strong>:
+			<a class="previous" href="/coding-problem-solutions/remove-duplicates-sorted-list/">Remove Duplicates from Sorted List</a>
+		</p>
+		 
+		<p>
+			<strong>Next Solution</strong>:
+			<a class="next" href="/coding-problem-solutions/robinhood/">Robinhood</a>
+		</p>
+		
+	</section>
+</div>
+
+</main>
+	
+<footer>
+	
+	<a href="https://github.com/oneminch"  target="_blank" rel="noopener noreferrer">
+		<img src="/coding-problem-solutions/assets/github.svg" alt="Github Icon" />
+		oneminch
+	</a>
+	<a href="https://oneminch.dev"  target="_blank" rel="noopener noreferrer">
+		<img src="/coding-problem-solutions/assets/website.svg" alt="Website Icon" />
+		Portfolio
+	</a>
+</footer>
+</body>
+</html>
+
