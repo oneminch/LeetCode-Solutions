@@ -13,12 +13,12 @@
 		<meta name="referrer" content="no-referrer" />
 		<meta http-equiv="X-Frame-Options" content="sameorigin" />
 		<!-- Primary Meta Tags -->
-		<meta name="title" content="Binary Tree Inorder Traversal" />
+		<meta name="title" content="Binary Tree Preorder Traversal" />
 		<meta name="description" content="" />
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website" />
-		<meta property="og:site_name" content="Binary Tree Inorder Traversal" />
-		<meta property="og:title" content="Binary Tree Inorder Traversal" />
+		<meta property="og:site_name" content="Binary Tree Preorder Traversal" />
+		<meta property="og:title" content="Binary Tree Preorder Traversal" />
 		<meta property="og:url" content="" />
 		<meta property="og:description" content="" />
 		<meta property="twitter:description" content="" />
@@ -39,7 +39,7 @@
 			href="https://cdn.statically.io/gh/PrismJS/prism-themes/447479fc/themes/prism-one-dark.min.css" />
 		<!-- Privacy friendly analytics -->
 		<script async defer data-website-id="d1c29b81-2b65-4740-89f9-e6bf2967fd19" src="https://oneminch-umami.vercel.app/minch-measure.js"></script>
-		<title>Binary Tree Inorder Traversal</title>
+		<title>Binary Tree Preorder Traversal</title>
 	</head>
 	<body></body>
 </html>
@@ -61,7 +61,7 @@
 				stroke-linejoin="round"
 				d="M8.25 4.5l7.5 7.5-7.5 7.5" />
 		</svg>
-		<h1>Binary Tree Inorder Traversal</h1>
+		<h1>Binary Tree Preorder Traversal</h1>
 	</section>
 
 	
@@ -75,7 +75,7 @@
 		
 		<code>binary trees</code>
 		
-		<code>inorder traversal</code>
+		<code>preorder traversal</code>
 		
 		<code>dfs</code>
 		
@@ -84,14 +84,14 @@
 	<article>
 		
 		<span class="content">
-			<strong>The Problem</strong>: <a href="https://leetcode.com/problems/binary-tree-inorder-traversal/" target="_blank" rel="noopener noreferrer">Binary Tree Inorder Traversal</a>
+			<strong>The Problem</strong>: <a href="https://leetcode.com/problems/binary-tree-preorder-traversal/" target="_blank" rel="noopener noreferrer">Binary Tree Preorder Traversal</a>
       
       <img src="/coding-problem-solutions/assets/leetcode.png" alt="Leetcode" title="Leetcode" />
 		</span>
 
 		
 		<p><strong>My Solution</strong>:</p>
-<pre class="language-py"><code class="language-py"><span class="token comment"># Recursive Approach</span><br><br><span class="token comment"># Definition for a binary tree node.</span><br><span class="token comment"># class TreeNode:</span><br><span class="token comment">#     def __init__(self, val=0, left=None, right=None):</span><br><span class="token comment">#         self.val = val</span><br><span class="token comment">#         self.left = left</span><br><span class="token comment">#         self.right = right</span><br><br><span class="token keyword">def</span> <span class="token function">inorderTraversal</span><span class="token punctuation">(</span>root<span class="token punctuation">:</span> Optional<span class="token punctuation">[</span>TreeNode<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">:</span><br>    <span class="token keyword">if</span> <span class="token keyword">not</span> root<span class="token punctuation">:</span><br>        <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><br><br>    <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token operator">*</span>inorderTraversal<span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">)</span><span class="token punctuation">,</span> root<span class="token punctuation">.</span>val<span class="token punctuation">,</span> <span class="token operator">*</span>inorderTraversal<span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">)</span><span class="token punctuation">]</span></code></pre>
+<pre class="language-py"><code class="language-py"><span class="token comment"># Recursive Approach</span><br><br><span class="token comment"># Definition for a binary tree node.</span><br><span class="token comment"># class TreeNode:</span><br><span class="token comment">#     def __init__(self, val=0, left=None, right=None):</span><br><span class="token comment">#         self.val = val</span><br><span class="token comment">#         self.left = left</span><br><span class="token comment">#         self.right = right</span><br><br><span class="token keyword">def</span> <span class="token function">preorderTraversal</span><span class="token punctuation">(</span>root<span class="token punctuation">:</span> Optional<span class="token punctuation">[</span>TreeNode<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">:</span><br>    <span class="token keyword">if</span> <span class="token keyword">not</span> root<span class="token punctuation">:</span><br>        <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><br><br>    <span class="token keyword">return</span> <span class="token punctuation">[</span>root<span class="token punctuation">.</span>val<span class="token punctuation">,</span> <span class="token operator">*</span>preorderTraversal<span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">*</span>preorderTraversal<span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">)</span><span class="token punctuation">]</span></code></pre>
 
 	</article>
 
@@ -99,12 +99,12 @@
 		 
 		<p>
 			<strong>Previous Solution</strong>:
-			<a class="previous" href="/coding-problem-solutions/3-6-9/">3-6-9</a>
+			<a class="previous" href="/coding-problem-solutions/binary-tree-postorder-traversal/">Binary Tree Postorder Traversal</a>
 		</p>
 		 
 		<p>
 			<strong>Next Solution</strong>:
-			<a class="next" href="/coding-problem-solutions/binary-tree-postorder-traversal/">Binary Tree Postorder Traversal</a>
+			<a class="next" href="/coding-problem-solutions/climbing-stairs/">Climbing Stairs</a>
 		</p>
 		
 	</section>
