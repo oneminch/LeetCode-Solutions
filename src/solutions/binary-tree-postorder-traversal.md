@@ -1,10 +1,10 @@
 ---
-title: Binary Tree Inorder Traversal
-problemUrl: https://leetcode.com/problems/binary-tree-inorder-traversal/
+title: Binary Tree Postorder Traversal
+problemUrl: https://leetcode.com/problems/binary-tree-postorder-traversal/
 tags:
   - python
   - binary trees
-  - inorder traversal
+  - postorder traversal
   - dfs
 ---
 
@@ -20,9 +20,9 @@ tags:
 #         self.left = left
 #         self.right = right
 
-def inorderTraversal(root: Optional[TreeNode]) -> List[int]:
+def postorderTraversal(root: Optional[TreeNode]) -> List[int]:
     if not root:
         return []
 
-    return [*inorderTraversal(root.left), root.val, *inorderTraversal(root.right)]
+    return [*postorderTraversal(root.left), *postorderTraversal(root.right), root.val]
 ```
