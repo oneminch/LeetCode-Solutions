@@ -1,13 +1,13 @@
 ---
-title: title
-problemUrl: url
+title: 
+problemUrl: 
 tags:
-  - python | javascript
-  - another tag
-  - another tag
+  - python
+  - 
 ---
 
 **My Solution**:
 
-```
+```py
+# ```javascript
 ```

@@ -1,10 +1,12 @@
 # Coding Problem Solutions
 
-## Outline
+List of my solutions to some coding problems on coding platforms like Leetcode, binarysearch and Coderbyte.
 
-- [3-6-9](https://github.com/oneminch/coding-problem-solutions/tree/main/src/solutions/3-6-9)
+![Screenshot (1)](src/assets/screenshot-1.png)
+
+![Screenshot (2)](src/assets/screenshot-2.png)
+
 
 ### TODO
 
-- add all solutions to project and link them in readme
-- header title overflow bug
+- [ ] add all my solutions from leetcode
