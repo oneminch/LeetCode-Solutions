@@ -8,8 +8,6 @@ tags:
 
 **My Solution**:
 
-## JavaScript
-
 ```js
 /**
  * @param {number[]} digits

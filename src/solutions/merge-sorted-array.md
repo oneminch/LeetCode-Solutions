@@ -10,8 +10,6 @@ tags:
 
 **My Solution**:
 
-## JavaScript
-
 ```js
 /**
  * @param {number[]} nums1

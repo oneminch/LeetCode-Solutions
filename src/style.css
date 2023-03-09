@@ -204,8 +204,28 @@ li > img {
 	margin-top: 1rem;
 }
 
+/* Responsive UI */
 @media screen and (min-width: 1280px) {
 	body {
 		width: 50%;
+	}
+}
+
+@media screen and (max-width: 720px) {
+	.solution > .header {
+		flex-direction: column;
+		align-items: start;
+	}
+
+	.solution > .header > svg {
+		display: none;
+	}
+
+	.solution > .header > h1,
+	.solution > .header > h2 {
+		margin: 0 0 .5rem 0;
+	}
+	.solution > .header > h1 {
+		margin-bottom: 1rem;
 	}
 }
