@@ -17,7 +17,19 @@ def twoSum(nums: List[int], target: int) -> List[int]:
 ```
 
 ```py
-# O(n^2)
+def twoSum(nums: List[int], target: int) -> List[int]:
+    hash_map = {}
+
+    for i in range(len(nums)):
+        y = target - nums[i]
+        if y in hash_map:
+            return [i, hash_map[y]]
+
+        hash_map[nums[i]] = i
+```
+
+```py
+# Brute Force: O(n^2)
 
 def twoSum(nums: List[int], target: int) -> List[int]:
     for i in range(len(nums) - 1):
