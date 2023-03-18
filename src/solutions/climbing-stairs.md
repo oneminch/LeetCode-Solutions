@@ -3,6 +3,9 @@ title: Climbing Stairs
 problemUrl: https://leetcode.com/problems/climbing-stairs/
 tags:
   - python
+  - javascript
+  - memoization
+  - dynamic programming
   - fibonacci
 ---
 
@@ -23,7 +26,7 @@ def climbStairs(n: int) -> int:
     return seq[-1]
 ```
 
-### Recursive Approach (with Memoization)
+### Memoized Recursive Approach (using Python Classes)
 
 ```py
 class Solution:
@@ -43,4 +46,27 @@ class Solution:
         self.cache[n] = result
 
         return result
+```
+
+### Memoized Recursive Approach (using JavaScript Closures)
+
+```js
+const climbStairs = (function() {
+    let cache = {}
+    
+    const func = function(n) {
+        if (n <= 2) return 1
+        
+        if (n in cache) {
+            result = cache[n]
+        } else {
+            result = func(n-1) + func(n-2)
+            cache[n] = result
+        }
+        
+        return result
+    }
+
+    return func;
+})()
 ```
