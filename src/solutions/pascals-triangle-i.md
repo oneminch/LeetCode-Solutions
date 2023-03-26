@@ -10,7 +10,7 @@ tags:
 
 ```py
 class Solution:
-    def generate(self, numRows: int) -> List[List[int]]:
+    def generate(numRows: int) -> List[List[int]]:
         pascals_triangle = [[1]]
 
         if numRows > 1:

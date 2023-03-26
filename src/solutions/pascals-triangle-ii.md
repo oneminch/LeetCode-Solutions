@@ -9,7 +9,7 @@ tags:
 **My Solution**:
 
 ```py
-def getRow(self, rowIndex: int) -> List[int]:
+def getRow(rowIndex: int) -> List[int]:
     pascals_triangle = [[1], [1,1]]
 
     if rowIndex < 2:

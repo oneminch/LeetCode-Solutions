@@ -9,7 +9,7 @@ tags:
 **My Solution**:
 
 ```py
-def longestCommonPrefix(self, strs: List[str]) -> str:
+def longestCommonPrefix(strs: List[str]) -> str:
 		prefixes = []
 		shorterStr = 0
 		commonCount = 0

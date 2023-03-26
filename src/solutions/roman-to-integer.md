@@ -10,7 +10,7 @@ tags:
 **My Solution**:
 
 ```py
-def romanToInt(self, s: str) -> int:
+def romanToInt(s: str) -> int:
 		basis = {
 				"I": 1,
 				"V": 5,

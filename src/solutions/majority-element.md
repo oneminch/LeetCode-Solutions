@@ -11,7 +11,7 @@ tags:
 
 ```py
 class Solution:
-    def majorityElement(self, nums: List[int]) -> int:
+    def majorityElement(nums: List[int]) -> int:
         sorted_nums = sorted(nums)
         uniques = {}
 

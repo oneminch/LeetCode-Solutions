@@ -16,7 +16,7 @@ tags:
 #         self.val = val
 #         self.next = next
 
-def deleteDuplicates(self, head: Optional[ListNode]) -> Optional[ListNode]:
+def deleteDuplicates(head: Optional[ListNode]) -> Optional[ListNode]:
 		# empty or single item list
 		if not head or not head.next:
 				return head

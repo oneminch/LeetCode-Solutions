@@ -28,7 +28,7 @@ var isPalindrome = function (s) {
 ## Python
 
 ```py
-def isPalindrome(self, s: str) -> bool:
+def isPalindrome(s: str) -> bool:
     my_str = ''.join(c for c in s if c.isalnum()).lower()
 
     return my_str == my_str[::-1]
