@@ -13,12 +13,12 @@
 		<meta name="referrer" content="no-referrer" />
 		<meta http-equiv="X-Frame-Options" content="sameorigin" />
 		<!-- Primary Meta Tags -->
-		<meta name="title" content="Detect the Only Duplicate in a List" />
+		<meta name="title" content="Reverse Linked List" />
 		<meta name="description" content="" />
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website" />
-		<meta property="og:site_name" content="Detect the Only Duplicate in a List" />
-		<meta property="og:title" content="Detect the Only Duplicate in a List" />
+		<meta property="og:site_name" content="Reverse Linked List" />
+		<meta property="og:title" content="Reverse Linked List" />
 		<meta property="og:url" content="" />
 		<meta property="og:description" content="" />
 		<meta property="twitter:description" content="" />
@@ -39,7 +39,7 @@
 			href="https://cdn.statically.io/gh/PrismJS/prism-themes/447479fc/themes/prism-one-dark.min.css" />
 		<!-- Privacy friendly analytics -->
 		<script async defer data-website-id="d1c29b81-2b65-4740-89f9-e6bf2967fd19" src="https://oneminch-umami.vercel.app/minch-measure.js"></script>
-		<title>Detect the Only Duplicate in a List</title>
+		<title>Reverse Linked List</title>
 	</head>
 	<body></body>
 </html>
@@ -61,35 +61,33 @@
 				stroke-linejoin="round"
 				d="M8.25 4.5l7.5 7.5-7.5 7.5" />
 		</svg>
-		<h1>Detect the Only Duplicate in a List</h1>
+		<h1>Reverse Linked List</h1>
 	</section>
 
 	
 	<section class="tags">
 		
-		<code>binarysearch</code>
+		<code>leetcode</code>
 		
 		<code>solutions</code>
 		
 		<code>python</code>
 		
-		<code>two pointers</code>
-		
-		<code>array</code>
+		<code>linked lists</code>
 		
 	</section>
 
 	<article>
 		
 		<span class="content">
-			<strong>The Problem</strong>: <a href="https://binarysearch.com/problems/Detect-the-Only-Duplicate-in-a-List" target="_blank" rel="noopener noreferrer">Detect the Only Duplicate in a List</a>
+			<strong>The Problem</strong>: <a href="https://leetcode.com/problems/reverse-linked-list/" target="_blank" rel="noopener noreferrer">Reverse Linked List</a>
       
-      <img src="/coding-problem-solutions/assets/binarysearch.png" alt="Binarysearch" title="Binarysearch" />
+      <img src="/coding-problem-solutions/assets/leetcode.png" alt="Leetcode" title="Leetcode" />
 		</span>
 
 		
 		<p><strong>My Solution</strong>:</p>
-<pre class="language-py"><code class="language-py"><span class="token keyword">def</span> <span class="token function">solve</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">:</span><br>    nums_sorted <span class="token operator">=</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><br><br>    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span><br>        <span class="token keyword">if</span> i <span class="token operator">></span> <span class="token builtin">len</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">:</span><br>            <span class="token keyword">break</span><br><br>        a <span class="token operator">=</span> nums_sorted<span class="token punctuation">[</span>i<span class="token punctuation">]</span><br>        b <span class="token operator">=</span> nums_sorted<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><br><br>        <span class="token keyword">if</span> a <span class="token operator">==</span> b<span class="token punctuation">:</span><br>            <span class="token keyword">return</span> a</code></pre>
+<pre class="language-py"><code class="language-py"><span class="token comment"># Definition for singly-linked list.</span><br><span class="token comment"># class ListNode:</span><br><span class="token comment">#     def __init__(self, val=0, next=None):</span><br><span class="token comment">#         self.val = val</span><br><span class="token comment">#         self.next = next</span><br><br><span class="token keyword">def</span> <span class="token function">reverseList</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> head<span class="token punctuation">:</span> Optional<span class="token punctuation">[</span>ListNode<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> Optional<span class="token punctuation">[</span>ListNode<span class="token punctuation">]</span><span class="token punctuation">:</span><br>    curr <span class="token operator">=</span> head<br>    stack <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><br>    reversed_list <span class="token operator">=</span> <span class="token boolean">None</span><br>    <br>    <span class="token keyword">while</span> curr<span class="token punctuation">:</span><br>        reversed_list <span class="token operator">=</span> ListNode<span class="token punctuation">(</span>curr<span class="token punctuation">.</span>val<span class="token punctuation">,</span> reversed_list<span class="token punctuation">)</span><br>        stack<span class="token punctuation">.</span>append<span class="token punctuation">(</span>reversed_list<span class="token punctuation">)</span><br>        curr <span class="token operator">=</span> curr<span class="token punctuation">.</span><span class="token builtin">next</span><br>        <br>    <span class="token keyword">return</span> reversed_list</code></pre>
 
 	</article>
 
@@ -97,12 +95,12 @@
 		 
 		<p>
 			<strong>Previous Solution</strong>:
-			<a class="previous" href="/coding-problem-solutions/climbing-stairs/">Climbing Stairs</a>
+			<a class="previous" href="/coding-problem-solutions/remove-linked-list-elements/">Remove Linked List Elements</a>
 		</p>
 		 
 		<p>
 			<strong>Next Solution</strong>:
-			<a class="next" href="/coding-problem-solutions/excel-sheet-column-number/">Excel Sheet Column Number</a>
+			<a class="next" href="/coding-problem-solutions/reverse-string/">Reverse String</a>
 		</p>
 		
 	</section>
