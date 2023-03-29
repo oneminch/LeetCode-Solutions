@@ -10,19 +10,18 @@ tags:
 **My Solution**:
 
 ```py
-class Solution:
-    def majorityElement(nums: List[int]) -> int:
-        sorted_nums = sorted(nums)
-        uniques = {}
+def majorityElement(nums: List[int]) -> int:
+    sorted_nums = sorted(nums)
+    uniques = {}
 
-        for i in sorted_nums:
-            if i not in uniques:
-                uniques[i] = 1
-            else:
-                uniques[i] += 1
+    for i in sorted_nums:
+        if i not in uniques:
+            uniques[i] = 1
+        else:
+            uniques[i] += 1
 
-        uniques_keys = list(uniques.keys())
-        uniques_vals = list(uniques.values())
+    uniques_keys = list(uniques.keys())
+    uniques_vals = list(uniques.values())
 
-        return uniques_keys[uniques_vals.index(max(uniques_vals))]
+    return uniques_keys[uniques_vals.index(max(uniques_vals))]
 ```

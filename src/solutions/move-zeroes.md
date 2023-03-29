@@ -11,7 +11,7 @@ tags:
 > Modified in-place
 
 ```py
-def moveZeroes(self, nums: List[int]) -> None:
+def moveZeroes(nums: List[int]) -> None:
     zero_count = 0
     
     while 0 in nums:

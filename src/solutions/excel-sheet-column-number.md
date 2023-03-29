@@ -12,7 +12,7 @@ tags:
 ```py
 import string
 
-def titleToNumber(self, columnTitle: str) -> int:
+def titleToNumber(columnTitle: str) -> int:
     str_list = string.ascii_uppercase[:26]
     
     column_num = 0

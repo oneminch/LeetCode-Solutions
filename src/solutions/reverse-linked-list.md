@@ -15,7 +15,7 @@ tags:
 #         self.val = val
 #         self.next = next
 
-def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+def reverseList(head: Optional[ListNode]) -> Optional[ListNode]:
     curr = head
     stack = []
     reversed_list = None
