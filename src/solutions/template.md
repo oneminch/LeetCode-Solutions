@@ -1,6 +1,6 @@
 ---
 title: 
-problemUrl: 
+problemUrl: https://leetcode.com/problems/
 tags:
   - python
   - 
