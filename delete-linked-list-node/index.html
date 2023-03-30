@@ -13,12 +13,12 @@
 		<meta name="referrer" content="no-referrer" />
 		<meta http-equiv="X-Frame-Options" content="sameorigin" />
 		<!-- Primary Meta Tags -->
-		<meta name="title" content="Remove Linked List Elements" />
+		<meta name="title" content="Delete Node in a Linked List" />
 		<meta name="description" content="" />
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website" />
-		<meta property="og:site_name" content="Remove Linked List Elements" />
-		<meta property="og:title" content="Remove Linked List Elements" />
+		<meta property="og:site_name" content="Delete Node in a Linked List" />
+		<meta property="og:title" content="Delete Node in a Linked List" />
 		<meta property="og:url" content="" />
 		<meta property="og:description" content="" />
 		<meta property="twitter:description" content="" />
@@ -39,7 +39,7 @@
 			href="https://cdn.statically.io/gh/PrismJS/prism-themes/447479fc/themes/prism-one-dark.min.css" />
 		<!-- Privacy friendly analytics -->
 		<script async defer data-website-id="d1c29b81-2b65-4740-89f9-e6bf2967fd19" src="https://oneminch-umami.vercel.app/minch-measure.js"></script>
-		<title>Remove Linked List Elements</title>
+		<title>Delete Node in a Linked List</title>
 	</head>
 	<body></body>
 </html>
@@ -61,7 +61,7 @@
 				stroke-linejoin="round"
 				d="M8.25 4.5l7.5 7.5-7.5 7.5" />
 		</svg>
-		<h1>Remove Linked List Elements</h1>
+		<h1>Delete Node in a Linked List</h1>
 	</section>
 
 	
@@ -75,19 +75,24 @@
 		
 		<code>linked lists</code>
 		
+		<code>in-place</code>
+		
 	</section>
 
 	<article>
 		
 		<span class="content">
-			<strong>The Problem</strong>: <a href="https://leetcode.com/problems/remove-linked-list-elements/" target="_blank" rel="noopener noreferrer">Remove Linked List Elements</a>
+			<strong>The Problem</strong>: <a href="https://leetcode.com/problems/delete-node-in-a-linked-list/" target="_blank" rel="noopener noreferrer">Delete Node in a Linked List</a>
       
       <img src="/coding-problem-solutions/assets/leetcode.png" alt="Leetcode" title="Leetcode" />
 		</span>
 
 		
 		<p><strong>My Solution</strong>:</p>
-<pre class="language-py"><code class="language-py"><span class="token comment"># Definition for singly-linked list.</span><br><span class="token comment"># class ListNode:</span><br><span class="token comment">#     def __init__(self, val=0, next=None):</span><br><span class="token comment">#         self.val = val</span><br><span class="token comment">#         self.next = next</span><br><br><span class="token keyword">def</span> <span class="token function">removeElements</span><span class="token punctuation">(</span>head<span class="token punctuation">:</span> Optional<span class="token punctuation">[</span>ListNode<span class="token punctuation">]</span><span class="token punctuation">,</span> val<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> Optional<span class="token punctuation">[</span>ListNode<span class="token punctuation">]</span><span class="token punctuation">:</span><br>    new_node <span class="token operator">=</span> ListNode<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> head<span class="token punctuation">)</span><br>    <br>    curr <span class="token operator">=</span> new_node<br>    <br>    <span class="token keyword">while</span> curr<span class="token punctuation">:</span><br>        <span class="token keyword">if</span> curr<span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token keyword">and</span> curr<span class="token punctuation">.</span><span class="token builtin">next</span><span class="token punctuation">.</span>val <span class="token operator">==</span> val<span class="token punctuation">:</span><br>            curr<span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token operator">=</span> curr<span class="token punctuation">.</span><span class="token builtin">next</span><span class="token punctuation">.</span><span class="token builtin">next</span><br>        <span class="token keyword">else</span><span class="token punctuation">:</span><br>            curr <span class="token operator">=</span> curr<span class="token punctuation">.</span><span class="token builtin">next</span><br><br>    <span class="token keyword">return</span> new_node<span class="token punctuation">.</span><span class="token builtin">next</span></code></pre>
+<blockquote>
+<p>Modified In-Place</p>
+</blockquote>
+<pre class="language-py"><code class="language-py"><span class="token comment"># Definition for singly-linked list.</span><br><span class="token comment"># class ListNode:</span><br><span class="token comment">#     def __init__(self, x):</span><br><span class="token comment">#         self.val = x</span><br><span class="token comment">#         self.next = None</span><br><br><span class="token keyword">def</span> <span class="token function">deleteNode</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">:</span><br>    <span class="token keyword">while</span> node<span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span><span class="token punctuation">:</span><br>        node<span class="token punctuation">.</span>val <span class="token operator">=</span> node<span class="token punctuation">.</span><span class="token builtin">next</span><span class="token punctuation">.</span>val<br>        <br>        <span class="token keyword">if</span> node<span class="token punctuation">.</span><span class="token builtin">next</span><span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span><br>            node<span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token operator">=</span> <span class="token boolean">None</span><br>        <span class="token keyword">else</span><span class="token punctuation">:</span><br>            node <span class="token operator">=</span> node<span class="token punctuation">.</span><span class="token builtin">next</span></code></pre>
 
 	</article>
 
@@ -95,12 +100,12 @@
 		 
 		<p>
 			<strong>Previous Solution</strong>:
-			<a class="previous" href="/coding-problem-solutions/remove-duplicates-sorted-list/">Remove Duplicates from Sorted List</a>
+			<a class="previous" href="/coding-problem-solutions/contains-duplicate/">Contains Duplicate</a>
 		</p>
 		 
 		<p>
 			<strong>Next Solution</strong>:
-			<a class="next" href="/coding-problem-solutions/reverse-integer/">Reverse Integer</a>
+			<a class="next" href="/coding-problem-solutions/only-duplicate/">Detect the Only Duplicate in a List</a>
 		</p>
 		
 	</section>

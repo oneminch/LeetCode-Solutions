@@ -13,12 +13,12 @@
 		<meta name="referrer" content="no-referrer" />
 		<meta http-equiv="X-Frame-Options" content="sameorigin" />
 		<!-- Primary Meta Tags -->
-		<meta name="title" content="Contains Duplicate" />
+		<meta name="title" content="Reverse Integer" />
 		<meta name="description" content="" />
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website" />
-		<meta property="og:site_name" content="Contains Duplicate" />
-		<meta property="og:title" content="Contains Duplicate" />
+		<meta property="og:site_name" content="Reverse Integer" />
+		<meta property="og:title" content="Reverse Integer" />
 		<meta property="og:url" content="" />
 		<meta property="og:description" content="" />
 		<meta property="twitter:description" content="" />
@@ -39,7 +39,7 @@
 			href="https://cdn.statically.io/gh/PrismJS/prism-themes/447479fc/themes/prism-one-dark.min.css" />
 		<!-- Privacy friendly analytics -->
 		<script async defer data-website-id="d1c29b81-2b65-4740-89f9-e6bf2967fd19" src="https://oneminch-umami.vercel.app/minch-measure.js"></script>
-		<title>Contains Duplicate</title>
+		<title>Reverse Integer</title>
 	</head>
 	<body></body>
 </html>
@@ -61,7 +61,7 @@
 				stroke-linejoin="round"
 				d="M8.25 4.5l7.5 7.5-7.5 7.5" />
 		</svg>
-		<h1>Contains Duplicate</h1>
+		<h1>Reverse Integer</h1>
 	</section>
 
 	
@@ -71,23 +71,23 @@
 		
 		<code>solutions</code>
 		
-		<code>python</code>
+		<code>javascript</code>
 		
-		<code>hash table</code>
+		<code>math</code>
 		
 	</section>
 
 	<article>
 		
 		<span class="content">
-			<strong>The Problem</strong>: <a href="https://leetcode.com/problems/contains-duplicate" target="_blank" rel="noopener noreferrer">Contains Duplicate</a>
+			<strong>The Problem</strong>: <a href="https://leetcode.com/problems/reverse-integer" target="_blank" rel="noopener noreferrer">Reverse Integer</a>
       
       <img src="/coding-problem-solutions/assets/leetcode.png" alt="Leetcode" title="Leetcode" />
 		</span>
 
 		
 		<p><strong>My Solution</strong>:</p>
-<pre class="language-py"><code class="language-py"><span class="token keyword">def</span> <span class="token function">containsDuplicate</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nums<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">bool</span><span class="token punctuation">:</span><br>    hash_table <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><br><br>    <span class="token keyword">for</span> num <span class="token keyword">in</span> nums<span class="token punctuation">:</span><br><br>        <span class="token keyword">if</span> num <span class="token keyword">in</span> hash_table<span class="token punctuation">:</span><br>            <span class="token keyword">return</span> <span class="token boolean">True</span><br>        <span class="token keyword">else</span><span class="token punctuation">:</span><br>            hash_table<span class="token punctuation">[</span>num<span class="token punctuation">]</span> <span class="token operator">=</span> num<br><br>    <span class="token keyword">return</span> <span class="token boolean">False</span></code></pre>
+<pre class="language-javascript"><code class="language-javascript"><span class="token comment">/**<br> * @param {number} x<br> * @return {number}<br> */</span><br><br><span class="token keyword">var</span> <span class="token function-variable function">reverse</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">x</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>    <span class="token keyword">var</span> n <span class="token operator">=</span> <span class="token function">Number</span><span class="token punctuation">(</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">abs</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">></span> <span class="token number">0x7FFFFFFF</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span><br>    <span class="token keyword">else</span> <span class="token keyword">return</span> <span class="token punctuation">(</span>x<span class="token operator">&lt;</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token operator">-</span>n <span class="token operator">:</span> n<span class="token punctuation">;</span><br><span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
 
 	</article>
 
@@ -95,12 +95,12 @@
 		 
 		<p>
 			<strong>Previous Solution</strong>:
-			<a class="previous" href="/coding-problem-solutions/climbing-stairs/">Climbing Stairs</a>
+			<a class="previous" href="/coding-problem-solutions/remove-linked-list-elements/">Remove Linked List Elements</a>
 		</p>
 		 
 		<p>
 			<strong>Next Solution</strong>:
-			<a class="next" href="/coding-problem-solutions/delete-linked-list-node/">Delete Node in a Linked List</a>
+			<a class="next" href="/coding-problem-solutions/reverse-linked-list/">Reverse Linked List</a>
 		</p>
 		
 	</section>
