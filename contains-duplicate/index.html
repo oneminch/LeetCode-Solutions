@@ -13,12 +13,12 @@
 		<meta name="referrer" content="no-referrer" />
 		<meta http-equiv="X-Frame-Options" content="sameorigin" />
 		<!-- Primary Meta Tags -->
-		<meta name="title" content="Move Zeroes" />
+		<meta name="title" content="Contains Duplicate" />
 		<meta name="description" content="" />
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website" />
-		<meta property="og:site_name" content="Move Zeroes" />
-		<meta property="og:title" content="Move Zeroes" />
+		<meta property="og:site_name" content="Contains Duplicate" />
+		<meta property="og:title" content="Contains Duplicate" />
 		<meta property="og:url" content="" />
 		<meta property="og:description" content="" />
 		<meta property="twitter:description" content="" />
@@ -39,7 +39,7 @@
 			href="https://cdn.statically.io/gh/PrismJS/prism-themes/447479fc/themes/prism-one-dark.min.css" />
 		<!-- Privacy friendly analytics -->
 		<script async defer data-website-id="d1c29b81-2b65-4740-89f9-e6bf2967fd19" src="https://oneminch-umami.vercel.app/minch-measure.js"></script>
-		<title>Move Zeroes</title>
+		<title>Contains Duplicate</title>
 	</head>
 	<body></body>
 </html>
@@ -61,7 +61,7 @@
 				stroke-linejoin="round"
 				d="M8.25 4.5l7.5 7.5-7.5 7.5" />
 		</svg>
-		<h1>Move Zeroes</h1>
+		<h1>Contains Duplicate</h1>
 	</section>
 
 	
@@ -73,24 +73,21 @@
 		
 		<code>python</code>
 		
-		<code>in-place</code>
+		<code>hash table</code>
 		
 	</section>
 
 	<article>
 		
 		<span class="content">
-			<strong>The Problem</strong>: <a href="https://leetcode.com/problems/move-zeroes/" target="_blank" rel="noopener noreferrer">Move Zeroes</a>
+			<strong>The Problem</strong>: <a href="https://leetcode.com/problems/contains-duplicate" target="_blank" rel="noopener noreferrer">Contains Duplicate</a>
       
       <img src="/coding-problem-solutions/assets/leetcode.png" alt="Leetcode" title="Leetcode" />
 		</span>
 
 		
 		<p><strong>My Solution</strong>:</p>
-<blockquote>
-<p>Modified in-place</p>
-</blockquote>
-<pre class="language-py"><code class="language-py"><span class="token keyword">def</span> <span class="token function">moveZeroes</span><span class="token punctuation">(</span>nums<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span><br>    zero_count <span class="token operator">=</span> <span class="token number">0</span><br>    <br>    <span class="token keyword">while</span> <span class="token number">0</span> <span class="token keyword">in</span> nums<span class="token punctuation">:</span><br>        nums<span class="token punctuation">.</span>pop<span class="token punctuation">(</span>nums<span class="token punctuation">.</span>index<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><br>        zero_count<span class="token operator">+=</span><span class="token number">1</span><br><br>    zeroes <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">*</span>zero_count<br>    nums <span class="token operator">+=</span> zeroes</code></pre>
+<pre class="language-py"><code class="language-py"><span class="token keyword">def</span> <span class="token function">containsDuplicate</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nums<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">bool</span><span class="token punctuation">:</span><br>    hash_table <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><br><br>    <span class="token keyword">for</span> num <span class="token keyword">in</span> nums<span class="token punctuation">:</span><br><br>        <span class="token keyword">if</span> num <span class="token keyword">in</span> hash_table<span class="token punctuation">:</span><br>            <span class="token keyword">return</span> <span class="token boolean">True</span><br>        <span class="token keyword">else</span><span class="token punctuation">:</span><br>            hash_table<span class="token punctuation">[</span>num<span class="token punctuation">]</span> <span class="token operator">=</span> num<br><br>    <span class="token keyword">return</span> <span class="token boolean">False</span></code></pre>
 
 	</article>
 
@@ -98,12 +95,12 @@
 		 
 		<p>
 			<strong>Previous Solution</strong>:
-			<a class="previous" href="/coding-problem-solutions/merge-two-sorted-lists/">Merge Two Sorted Lists</a>
+			<a class="previous" href="/coding-problem-solutions/climbing-stairs/">Climbing Stairs</a>
 		</p>
 		 
 		<p>
 			<strong>Next Solution</strong>:
-			<a class="next" href="/coding-problem-solutions/moving-median/">Moving Median</a>
+			<a class="next" href="/coding-problem-solutions/only-duplicate/">Detect the Only Duplicate in a List</a>
 		</p>
 		
 	</section>

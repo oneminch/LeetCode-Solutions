@@ -4,15 +4,28 @@
 	<subtitle>List of my solutions to some coding problems on coding platforms like Leetcode</subtitle>
 	<link href="https://oneminch.dev/coding-problem-solutions/feed.xml" rel="self" />
 	<link href="https://oneminch.dev/coding-problem-solutions/" />
-	<updated>2023-03-29T18:13:34Z</updated>
+	<updated>2023-03-30T17:47:30Z</updated>
 	<id>https://oneminch.dev/coding-problem-solutions/</id>
 	<author>
 		<name>Dawit</name>
 	</author>
 	<entry>
+		<title>Valid Parentheses</title>
+		<link href="https://oneminch.dev/coding-problem-solutions/undefined" />
+		<updated>2023-03-30T17:47:30Z</updated>
+		<id>https://oneminch.dev/coding-problem-solutions/undefined</id>
+		<content
+			xml:lang="en"
+			type="html"
+			>&lt;p&gt;&lt;strong&gt;My Solution&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre class=&quot;language-py&quot;&gt;&lt;code class=&quot;language-py&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;isValid&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;s&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;bool&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;    mappings &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;        &lt;span class=&quot;token string&quot;&gt;&quot;(&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;)&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;br /&gt;        &lt;span class=&quot;token string&quot;&gt;&quot;{&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;}&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;br /&gt;        &lt;span class=&quot;token string&quot;&gt;&quot;[&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;]&quot;&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;    stack &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;    &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; parenthesis &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;s&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; parenthesis &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; mappings&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;            stack&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;append&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;parenthesis&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;            &lt;span class=&quot;token keyword&quot;&gt;continue&lt;/span&gt;&lt;br /&gt;        &lt;br /&gt;        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;stack&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;and&lt;/span&gt; mappings&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;stack&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; parenthesis&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;            stack&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;pop&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;        &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;            &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;False&lt;/span&gt;&lt;br /&gt;            &lt;br /&gt;&lt;br /&gt;    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;False&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;stack&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;s&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;br /&gt;&lt;/code&gt;&lt;/pre&gt;
+</content
+		>
+	</entry>
+	<entry>
 		<title>Valid Palindrome</title>
 		<link href="https://oneminch.dev/coding-problem-solutions/undefined" />
-		<updated>2023-03-29T18:13:34Z</updated>
+		<updated>2023-03-30T17:47:30Z</updated>
 		<id>https://oneminch.dev/coding-problem-solutions/undefined</id>
 		<content
 			xml:lang="en"
@@ -28,7 +41,7 @@
 	<entry>
 		<title>Undirected Path</title>
 		<link href="https://oneminch.dev/coding-problem-solutions/undefined" />
-		<updated>2023-03-29T18:13:34Z</updated>
+		<updated>2023-03-30T17:47:30Z</updated>
 		<id>https://oneminch.dev/coding-problem-solutions/undefined</id>
 		<content
 			xml:lang="en"
@@ -41,7 +54,7 @@
 	<entry>
 		<title>Two Sum</title>
 		<link href="https://oneminch.dev/coding-problem-solutions/undefined" />
-		<updated>2023-03-29T18:13:34Z</updated>
+		<updated>2023-03-30T17:47:30Z</updated>
 		<id>https://oneminch.dev/coding-problem-solutions/undefined</id>
 		<content
 			xml:lang="en"
@@ -56,7 +69,7 @@
 	<entry>
 		<title>Tree Constructor</title>
 		<link href="https://oneminch.dev/coding-problem-solutions/undefined" />
-		<updated>2023-03-29T18:13:34Z</updated>
+		<updated>2023-03-30T17:47:30Z</updated>
 		<id>https://oneminch.dev/coding-problem-solutions/undefined</id>
 		<content
 			xml:lang="en"
@@ -69,7 +82,7 @@
 	<entry>
 		<title>Sliding Window Median</title>
 		<link href="https://oneminch.dev/coding-problem-solutions/undefined" />
-		<updated>2023-03-29T18:13:34Z</updated>
+		<updated>2023-03-30T17:47:30Z</updated>
 		<id>https://oneminch.dev/coding-problem-solutions/undefined</id>
 		<content
 			xml:lang="en"
@@ -82,7 +95,7 @@
 	<entry>
 		<title>Single Number II</title>
 		<link href="https://oneminch.dev/coding-problem-solutions/undefined" />
-		<updated>2023-03-29T18:13:34Z</updated>
+		<updated>2023-03-30T17:47:30Z</updated>
 		<id>https://oneminch.dev/coding-problem-solutions/undefined</id>
 		<content
 			xml:lang="en"
@@ -95,7 +108,7 @@
 	<entry>
 		<title>Single Number</title>
 		<link href="https://oneminch.dev/coding-problem-solutions/undefined" />
-		<updated>2023-03-29T18:13:34Z</updated>
+		<updated>2023-03-30T17:47:30Z</updated>
 		<id>https://oneminch.dev/coding-problem-solutions/undefined</id>
 		<content
 			xml:lang="en"
@@ -108,7 +121,7 @@
 	<entry>
 		<title>Running Sum of a 1D Array</title>
 		<link href="https://oneminch.dev/coding-problem-solutions/undefined" />
-		<updated>2023-03-29T18:13:34Z</updated>
+		<updated>2023-03-30T17:47:30Z</updated>
 		<id>https://oneminch.dev/coding-problem-solutions/undefined</id>
 		<content
 			xml:lang="en"
@@ -121,7 +134,7 @@
 	<entry>
 		<title>Roman to Integer</title>
 		<link href="https://oneminch.dev/coding-problem-solutions/undefined" />
-		<updated>2023-03-29T18:13:34Z</updated>
+		<updated>2023-03-30T17:47:30Z</updated>
 		<id>https://oneminch.dev/coding-problem-solutions/undefined</id>
 		<content
 			xml:lang="en"
@@ -134,7 +147,7 @@
 	<entry>
 		<title>Robinhood</title>
 		<link href="https://oneminch.dev/coding-problem-solutions/undefined" />
-		<updated>2023-03-29T18:13:34Z</updated>
+		<updated>2023-03-30T17:47:30Z</updated>
 		<id>https://oneminch.dev/coding-problem-solutions/undefined</id>
 		<content
 			xml:lang="en"
@@ -147,7 +160,7 @@
 	<entry>
 		<title>Reverse String</title>
 		<link href="https://oneminch.dev/coding-problem-solutions/undefined" />
-		<updated>2023-03-29T18:13:34Z</updated>
+		<updated>2023-03-30T17:47:30Z</updated>
 		<id>https://oneminch.dev/coding-problem-solutions/undefined</id>
 		<content
 			xml:lang="en"
@@ -163,20 +176,20 @@
 	<entry>
 		<title>Reverse Linked List</title>
 		<link href="https://oneminch.dev/coding-problem-solutions/undefined" />
-		<updated>2023-03-29T18:13:34Z</updated>
+		<updated>2023-03-30T17:47:30Z</updated>
 		<id>https://oneminch.dev/coding-problem-solutions/undefined</id>
 		<content
 			xml:lang="en"
 			type="html"
 			>&lt;p&gt;&lt;strong&gt;My Solution&lt;/strong&gt;:&lt;/p&gt;
-&lt;pre class=&quot;language-py&quot;&gt;&lt;code class=&quot;language-py&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# Definition for singly-linked list.&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token comment&quot;&gt;# class ListNode:&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token comment&quot;&gt;#     def __init__(self, val=0, next=None):&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token comment&quot;&gt;#         self.val = val&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token comment&quot;&gt;#         self.next = next&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;reverseList&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;self&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; head&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Optional&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;ListNode&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; Optional&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;ListNode&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;    curr &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; head&lt;br /&gt;    stack &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;br /&gt;    reversed_list &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;None&lt;/span&gt;&lt;br /&gt;    &lt;br /&gt;    &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; curr&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;        reversed_list &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; ListNode&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;curr&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;val&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; reversed_list&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;        stack&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;append&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;reversed_list&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;        curr &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; curr&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;next&lt;/span&gt;&lt;br /&gt;        &lt;br /&gt;    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; reversed_list&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;language-py&quot;&gt;&lt;code class=&quot;language-py&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# Definition for singly-linked list.&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token comment&quot;&gt;# class ListNode:&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token comment&quot;&gt;#     def __init__(self, val=0, next=None):&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token comment&quot;&gt;#         self.val = val&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token comment&quot;&gt;#         self.next = next&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;reverseList&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;head&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Optional&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;ListNode&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; Optional&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;ListNode&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;    curr &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; head&lt;br /&gt;    stack &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;br /&gt;    reversed_list &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;None&lt;/span&gt;&lt;br /&gt;    &lt;br /&gt;    &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; curr&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;        reversed_list &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; ListNode&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;curr&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;val&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; reversed_list&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;        stack&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;append&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;reversed_list&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;        curr &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; curr&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;next&lt;/span&gt;&lt;br /&gt;        &lt;br /&gt;    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; reversed_list&lt;/code&gt;&lt;/pre&gt;
 </content
 		>
 	</entry>
 	<entry>
 		<title>Remove Linked List Elements</title>
 		<link href="https://oneminch.dev/coding-problem-solutions/undefined" />
-		<updated>2023-03-29T18:13:34Z</updated>
+		<updated>2023-03-30T17:47:30Z</updated>
 		<id>https://oneminch.dev/coding-problem-solutions/undefined</id>
 		<content
 			xml:lang="en"
@@ -189,7 +202,7 @@
 	<entry>
 		<title>Remove Duplicates from Sorted List</title>
 		<link href="https://oneminch.dev/coding-problem-solutions/undefined" />
-		<updated>2023-03-29T18:13:34Z</updated>
+		<updated>2023-03-30T17:47:30Z</updated>
 		<id>https://oneminch.dev/coding-problem-solutions/undefined</id>
 		<content
 			xml:lang="en"
@@ -202,7 +215,7 @@
 	<entry>
 		<title>Plus One</title>
 		<link href="https://oneminch.dev/coding-problem-solutions/undefined" />
-		<updated>2023-03-29T18:13:34Z</updated>
+		<updated>2023-03-30T17:47:30Z</updated>
 		<id>https://oneminch.dev/coding-problem-solutions/undefined</id>
 		<content
 			xml:lang="en"
@@ -215,7 +228,7 @@
 	<entry>
 		<title>Pascal&#39;s Triangle II</title>
 		<link href="https://oneminch.dev/coding-problem-solutions/undefined" />
-		<updated>2023-03-29T18:13:34Z</updated>
+		<updated>2023-03-30T17:47:30Z</updated>
 		<id>https://oneminch.dev/coding-problem-solutions/undefined</id>
 		<content
 			xml:lang="en"
@@ -228,20 +241,20 @@
 	<entry>
 		<title>Pascal&#39;s Triangle I</title>
 		<link href="https://oneminch.dev/coding-problem-solutions/undefined" />
-		<updated>2023-03-29T18:13:34Z</updated>
+		<updated>2023-03-30T17:47:30Z</updated>
 		<id>https://oneminch.dev/coding-problem-solutions/undefined</id>
 		<content
 			xml:lang="en"
 			type="html"
 			>&lt;p&gt;&lt;strong&gt;My Solution&lt;/strong&gt;:&lt;/p&gt;
-&lt;pre class=&quot;language-py&quot;&gt;&lt;code class=&quot;language-py&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Solution&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;generate&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;numRows&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; List&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;List&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;        pascals_triangle &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; numRows &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;            pascals_triangle&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;append&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;        &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; i &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; numRows&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;            l &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;br /&gt;            l&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;append&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;            prev_triangle &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; pascals_triangle&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;br /&gt;            &lt;br /&gt;            &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; j &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;prev_triangle&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;                l&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;append&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;prev_triangle&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;j&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; prev_triangle&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;j&lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;            &lt;br /&gt;            l&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;append&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;            pascals_triangle&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;append&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;l&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; pascals_triangle&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;language-py&quot;&gt;&lt;code class=&quot;language-py&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;generate&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;numRows&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; List&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;List&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;    pascals_triangle &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; numRows &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;        pascals_triangle&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;append&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;    &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; i &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; numRows&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;        l &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;br /&gt;        l&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;append&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;        prev_triangle &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; pascals_triangle&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;br /&gt;        &lt;br /&gt;        &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; j &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;prev_triangle&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;            l&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;append&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;prev_triangle&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;j&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; prev_triangle&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;j&lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;        &lt;br /&gt;        l&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;append&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;        pascals_triangle&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;append&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;l&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; pascals_triangle&lt;/code&gt;&lt;/pre&gt;
 </content
 		>
 	</entry>
 	<entry>
 		<title>Palindrome Number</title>
 		<link href="https://oneminch.dev/coding-problem-solutions/undefined" />
-		<updated>2023-03-29T18:13:34Z</updated>
+		<updated>2023-03-30T17:47:30Z</updated>
 		<id>https://oneminch.dev/coding-problem-solutions/undefined</id>
 		<content
 			xml:lang="en"
@@ -254,7 +267,7 @@
 	<entry>
 		<title>Moving Median</title>
 		<link href="https://oneminch.dev/coding-problem-solutions/undefined" />
-		<updated>2023-03-29T18:13:34Z</updated>
+		<updated>2023-03-30T17:47:30Z</updated>
 		<id>https://oneminch.dev/coding-problem-solutions/undefined</id>
 		<content
 			xml:lang="en"
@@ -267,7 +280,7 @@
 	<entry>
 		<title>Move Zeroes</title>
 		<link href="https://oneminch.dev/coding-problem-solutions/undefined" />
-		<updated>2023-03-29T18:13:34Z</updated>
+		<updated>2023-03-30T17:47:30Z</updated>
 		<id>https://oneminch.dev/coding-problem-solutions/undefined</id>
 		<content
 			xml:lang="en"
@@ -276,14 +289,14 @@
 &lt;blockquote&gt;
 &lt;p&gt;Modified in-place&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;pre class=&quot;language-py&quot;&gt;&lt;code class=&quot;language-py&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;moveZeroes&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;self&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; nums&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; List&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;    zero_count &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;br /&gt;    &lt;br /&gt;    &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; nums&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;        nums&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;pop&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;nums&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;index&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;        zero_count&lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;    zeroes &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;zero_count&lt;br /&gt;    nums &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; zeroes&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;language-py&quot;&gt;&lt;code class=&quot;language-py&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;moveZeroes&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;nums&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; List&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;    zero_count &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;br /&gt;    &lt;br /&gt;    &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; nums&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;        nums&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;pop&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;nums&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;index&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;        zero_count&lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;    zeroes &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;zero_count&lt;br /&gt;    nums &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; zeroes&lt;/code&gt;&lt;/pre&gt;
 </content
 		>
 	</entry>
 	<entry>
 		<title>Merge Two Sorted Lists</title>
 		<link href="https://oneminch.dev/coding-problem-solutions/undefined" />
-		<updated>2023-03-29T18:13:34Z</updated>
+		<updated>2023-03-30T17:47:30Z</updated>
 		<id>https://oneminch.dev/coding-problem-solutions/undefined</id>
 		<content
 			xml:lang="en"
@@ -296,7 +309,7 @@
 	<entry>
 		<title>Merge Sorted Array</title>
 		<link href="https://oneminch.dev/coding-problem-solutions/undefined" />
-		<updated>2023-03-29T18:13:34Z</updated>
+		<updated>2023-03-30T17:47:30Z</updated>
 		<id>https://oneminch.dev/coding-problem-solutions/undefined</id>
 		<content
 			xml:lang="en"
@@ -309,20 +322,20 @@
 	<entry>
 		<title>Majority Element</title>
 		<link href="https://oneminch.dev/coding-problem-solutions/undefined" />
-		<updated>2023-03-29T18:13:34Z</updated>
+		<updated>2023-03-30T17:47:30Z</updated>
 		<id>https://oneminch.dev/coding-problem-solutions/undefined</id>
 		<content
 			xml:lang="en"
 			type="html"
 			>&lt;p&gt;&lt;strong&gt;My Solution&lt;/strong&gt;:&lt;/p&gt;
-&lt;pre class=&quot;language-py&quot;&gt;&lt;code class=&quot;language-py&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Solution&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;majorityElement&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;nums&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; List&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;        sorted_nums &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;sorted&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;nums&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;        uniques &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;        &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; i &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; sorted_nums&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;            &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; i &lt;span class=&quot;token keyword&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; uniques&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;                uniques&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;br /&gt;            &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;                uniques&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;        uniques_keys &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;uniques&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;keys&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;        uniques_vals &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;uniques&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;values&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; uniques_keys&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;uniques_vals&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;index&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;uniques_vals&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;language-py&quot;&gt;&lt;code class=&quot;language-py&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;majorityElement&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;nums&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; List&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;    sorted_nums &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;sorted&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;nums&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;    uniques &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;    &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; i &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; sorted_nums&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; i &lt;span class=&quot;token keyword&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; uniques&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;            uniques&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;br /&gt;        &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;            uniques&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;    uniques_keys &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;uniques&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;keys&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;    uniques_vals &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;uniques&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;values&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; uniques_keys&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;uniques_vals&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;index&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;uniques_vals&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 </content
 		>
 	</entry>
 	<entry>
 		<title>Longest Common Prefix</title>
 		<link href="https://oneminch.dev/coding-problem-solutions/undefined" />
-		<updated>2023-03-29T18:13:34Z</updated>
+		<updated>2023-03-30T17:47:30Z</updated>
 		<id>https://oneminch.dev/coding-problem-solutions/undefined</id>
 		<content
 			xml:lang="en"
@@ -335,7 +348,7 @@
 	<entry>
 		<title>Happy Number</title>
 		<link href="https://oneminch.dev/coding-problem-solutions/undefined" />
-		<updated>2023-03-29T18:13:34Z</updated>
+		<updated>2023-03-30T17:47:30Z</updated>
 		<id>https://oneminch.dev/coding-problem-solutions/undefined</id>
 		<content
 			xml:lang="en"
@@ -348,7 +361,7 @@
 	<entry>
 		<title>Flatten</title>
 		<link href="https://oneminch.dev/coding-problem-solutions/undefined" />
-		<updated>2023-03-29T18:13:34Z</updated>
+		<updated>2023-03-30T17:47:30Z</updated>
 		<id>https://oneminch.dev/coding-problem-solutions/undefined</id>
 		<content
 			xml:lang="en"
@@ -361,7 +374,7 @@
 	<entry>
 		<title>Fizz Buzz</title>
 		<link href="https://oneminch.dev/coding-problem-solutions/undefined" />
-		<updated>2023-03-29T18:13:34Z</updated>
+		<updated>2023-03-30T17:47:30Z</updated>
 		<id>https://oneminch.dev/coding-problem-solutions/undefined</id>
 		<content
 			xml:lang="en"
@@ -374,7 +387,7 @@
 	<entry>
 		<title>Find Pivot Index</title>
 		<link href="https://oneminch.dev/coding-problem-solutions/undefined" />
-		<updated>2023-03-29T18:13:34Z</updated>
+		<updated>2023-03-30T17:47:30Z</updated>
 		<id>https://oneminch.dev/coding-problem-solutions/undefined</id>
 		<content
 			xml:lang="en"
@@ -387,20 +400,20 @@
 	<entry>
 		<title>Excel Sheet Column Number</title>
 		<link href="https://oneminch.dev/coding-problem-solutions/undefined" />
-		<updated>2023-03-29T18:13:34Z</updated>
+		<updated>2023-03-30T17:47:30Z</updated>
 		<id>https://oneminch.dev/coding-problem-solutions/undefined</id>
 		<content
 			xml:lang="en"
 			type="html"
 			>&lt;p&gt;&lt;strong&gt;My Solution&lt;/strong&gt;:&lt;/p&gt;
-&lt;pre class=&quot;language-py&quot;&gt;&lt;code class=&quot;language-py&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; string&lt;br /&gt;&lt;br /&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;titleToNumber&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;self&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; columnTitle&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;    str_list &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; string&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;ascii_uppercase&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;26&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;br /&gt;    &lt;br /&gt;    column_num &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;br /&gt;    letters &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;reversed&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;columnTitle&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; index&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; letter &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;enumerate&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;letters&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;        column_num &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;str_list&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;index&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;letter&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;26&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;**&lt;/span&gt;index&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; column_num&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;language-py&quot;&gt;&lt;code class=&quot;language-py&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; string&lt;br /&gt;&lt;br /&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;titleToNumber&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;columnTitle&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;    str_list &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; string&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;ascii_uppercase&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;26&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;br /&gt;    &lt;br /&gt;    column_num &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;br /&gt;    letters &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;reversed&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;columnTitle&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; index&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; letter &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;enumerate&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;letters&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;        column_num &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;str_list&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;index&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;letter&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;26&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;**&lt;/span&gt;index&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; column_num&lt;/code&gt;&lt;/pre&gt;
 </content
 		>
 	</entry>
 	<entry>
 		<title>Detect the Only Duplicate in a List</title>
 		<link href="https://oneminch.dev/coding-problem-solutions/undefined" />
-		<updated>2023-03-29T18:13:34Z</updated>
+		<updated>2023-03-30T17:47:30Z</updated>
 		<id>https://oneminch.dev/coding-problem-solutions/undefined</id>
 		<content
 			xml:lang="en"
@@ -411,9 +424,22 @@
 		>
 	</entry>
 	<entry>
+		<title>Contains Duplicate</title>
+		<link href="https://oneminch.dev/coding-problem-solutions/undefined" />
+		<updated>2023-03-30T17:47:30Z</updated>
+		<id>https://oneminch.dev/coding-problem-solutions/undefined</id>
+		<content
+			xml:lang="en"
+			type="html"
+			>&lt;p&gt;&lt;strong&gt;My Solution&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre class=&quot;language-py&quot;&gt;&lt;code class=&quot;language-py&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;containsDuplicate&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;self&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; nums&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; List&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;bool&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;    hash_table &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;    &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; num &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; nums&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; num &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; hash_table&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;            &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;br /&gt;        &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;            hash_table&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;num&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; num&lt;br /&gt;&lt;br /&gt;    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;False&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+</content
+		>
+	</entry>
+	<entry>
 		<title>Climbing Stairs</title>
 		<link href="https://oneminch.dev/coding-problem-solutions/undefined" />
-		<updated>2023-03-29T18:13:34Z</updated>
+		<updated>2023-03-30T17:47:30Z</updated>
 		<id>https://oneminch.dev/coding-problem-solutions/undefined</id>
 		<content
 			xml:lang="en"
@@ -431,7 +457,7 @@
 	<entry>
 		<title>Binary Tree Preorder Traversal</title>
 		<link href="https://oneminch.dev/coding-problem-solutions/undefined" />
-		<updated>2023-03-29T18:13:34Z</updated>
+		<updated>2023-03-30T17:47:30Z</updated>
 		<id>https://oneminch.dev/coding-problem-solutions/undefined</id>
 		<content
 			xml:lang="en"
@@ -444,7 +470,7 @@
 	<entry>
 		<title>Binary Tree Postorder Traversal</title>
 		<link href="https://oneminch.dev/coding-problem-solutions/undefined" />
-		<updated>2023-03-29T18:13:34Z</updated>
+		<updated>2023-03-30T17:47:30Z</updated>
 		<id>https://oneminch.dev/coding-problem-solutions/undefined</id>
 		<content
 			xml:lang="en"
@@ -457,7 +483,7 @@
 	<entry>
 		<title>Binary Tree Inorder Traversal</title>
 		<link href="https://oneminch.dev/coding-problem-solutions/undefined" />
-		<updated>2023-03-29T18:13:34Z</updated>
+		<updated>2023-03-30T17:47:30Z</updated>
 		<id>https://oneminch.dev/coding-problem-solutions/undefined</id>
 		<content
 			xml:lang="en"
@@ -470,7 +496,7 @@
 	<entry>
 		<title>3-6-9</title>
 		<link href="https://oneminch.dev/coding-problem-solutions/undefined" />
-		<updated>2023-03-29T18:13:34Z</updated>
+		<updated>2023-03-30T17:47:30Z</updated>
 		<id>https://oneminch.dev/coding-problem-solutions/undefined</id>
 		<content
 			xml:lang="en"
