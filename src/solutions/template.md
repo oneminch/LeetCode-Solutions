@@ -2,12 +2,12 @@
 title: 
 problemUrl: https://leetcode.com/problems/
 tags:
-  - python
+  - python/javascript
   - 
 ---
 
 **My Solution**:
 
 ```py
-# ```javascript
+```javascript
 ```

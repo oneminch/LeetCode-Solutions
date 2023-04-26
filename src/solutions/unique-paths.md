@@ -2,7 +2,7 @@
 title: Unique Paths
 problemUrl: https://leetcode.com/problems/unique-paths
 tags:
-  - python
+  - javascript
   - dynamic programming
 ---
 
