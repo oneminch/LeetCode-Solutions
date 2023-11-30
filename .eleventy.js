@@ -40,6 +40,6 @@ module.exports = function (eleventyConfig) {
 		dir: {
 			input: "src"
 		},
-		pathPrefix: "/coding-problem-solutions/"
+		pathPrefix: "/LeetCode-Solutions/"
 	};
 };
